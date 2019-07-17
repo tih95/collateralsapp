@@ -48,7 +48,7 @@ export default class QRReaderScreen extends Component {
         onRead={this.onSuccess}
         topContent={
           <View>
-            <Text>{this.state.checkedIn ? 'You are checked in!' : 'Please scan the QR code near the front of the entrance'}</Text>
+            <Text style={[styles.textBold, styles.centerText]}>{this.state.checkedIn ? 'You are checked in!' : 'Please scan the QR code near the front of the entrance'}</Text>
           </View>
         }
       />
@@ -66,6 +66,7 @@ const styles = StyleSheet.create({
   textBold: {
     fontWeight: '500',
     color: '#000',
+    marginTop: 15
   },
   buttonText: {
     fontSize: 21,
