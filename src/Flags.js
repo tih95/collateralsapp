@@ -10,7 +10,14 @@ const Flags = {
     Italy: require('../assets/img/flags/italy-flag-round-xs.png'),
     France: require('../assets/img/flags/france-flag-round-xs.png'),
     Spain: require('../assets/img/flags/spain-flag-round-xs.png'),
-    Portugal: require('../assets/img/flags/portugal-flag-round-xs.png')
+    Portugal: require('../assets/img/flags/portugal-flag-round-xs.png'),
+    Greece: require('../assets/img/flags/greece-flag-round-xs.png'),
+    Egypt: require('../assets/img/flags/egypt-flag-round-xs.png'),
+    Nigeria: require('../assets/img/flags/nigeria-flag-round-xs.png'),
+    Ghana: require('../assets/img/flags/ghana-flag-round-xs.png'),
+    'South Africa': require('../assets/img/flags/south-africa-flag-round-xs.png'),
+    Switzerland: require('../assets/img/flags/switzerland-flag-round-xs.png'),
+    Germany: require('../assets/img/flags/germany-flag-round-xs.png')
 }
 
 export default Flags;

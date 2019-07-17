@@ -288,6 +288,39 @@
          ],
          "startTime": "09:30",
          "day": 1
+      },
+      {
+         "country": "Greece & Egypt",
+         "speakers": [
+            { "name": "George Magoufis" },
+            { "name": "Safouris Apostolos" },
+            { "name": "Odysseas Kargoitis" },
+            { "name": "Ossama Mansour" },
+            { "name": "Tamer Hassen" }
+         ],
+         "startTime": "07:30",
+         "day": 2
+      },
+      {
+         "country": "Nigeria, Ghana & South Africa",
+         "speakers": [
+            { "name": "Yomi Ogun" },
+            { "name": "Fred Sarfo" },
+            { "name": "Alan Bryer" }
+         ],
+         "startTime": "08:10",
+         "day": 2
+      },
+      {
+         "country": "Switzerland & Germany",
+         "speakers": [
+            { "name": "Urs Fischer" },
+            { "name": "Remy Laville" },
+            { "name": "Marios Psychogios" },
+            { "name": "Werner Hacke" }
+         ],
+         "startTime": "08:50",
+         "day": 2
       }
    ]
 }
