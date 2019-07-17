@@ -29,6 +29,7 @@ import SettingsScreen from './src/screens/SettingsScreen';
 import SpeakerPage from './src/screens/SpeakerPage';
 import HomeScreen from './src/screens/HomeScreen';
 import SponsorsScreen from './src/screens/SponsorsScreen';
+import ForgotPasswordScreen from './src/screens/ForgotPasswordScreen';
 
 const SpeakerStack = createStackNavigator(
   {
@@ -84,6 +85,7 @@ const AuthStack = createStackNavigator(
   {
     Login: LoginScreen,
     Signup: SignupScreen,
+    ForgotPassword: ForgotPasswordScreen
   },
   {
     initialRoute: 'Login'

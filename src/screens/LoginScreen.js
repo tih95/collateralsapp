@@ -40,6 +40,10 @@ export default class LoginScreen extends Component {
     this.props.navigation.navigate('Signup')
   }
 
+  _showForgotPasswordPage = () => {
+    this.props.navigation.navigate('ForgotPassword')
+  }
+
   render() {
     return (
 
@@ -58,7 +62,7 @@ export default class LoginScreen extends Component {
             placeholder="Email"
             color='#C0C0C0'
             underlineColor={{default: '#C0C0C0', focus: 'white'}}
-            onChangeText={email => this.setState({ email })}
+            onChangeText={email => this.setState({ email: email, errorMessage: null })}
             value={this.state.email}
             floatOnFocus
             keyboardType="email-address"
@@ -73,7 +77,7 @@ export default class LoginScreen extends Component {
             placeholder='Password'
             color='#C0C0C0'
             underlineColor={{default: '#C0C0C0', focus: 'white'}}
-            onChangeText={password => this.setState({ password })}
+            onChangeText={password => this.setState({ password: password, errorMessage: null })}
             value={this.state.password}
             floatOnFocus
             returnKeyType="done"
@@ -95,6 +99,12 @@ export default class LoginScreen extends Component {
           label="Don't have an account? Register here"
           link={true}
           onPress={this._showSignUpPage}
+        />
+        <Button
+          style={{marginTop: 20}}
+          label="Forgot password?"
+          link={true}
+          onPress={this._showForgotPasswordPage}
         />
       </View>
     )
