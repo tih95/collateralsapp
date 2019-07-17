@@ -18,6 +18,7 @@ export default class SignupScreen extends Component {
       confirmPassword: '',
       errorMessage: null,
       loading: false,
+      emailErrorMessage: null
     }
   }
 
@@ -32,8 +33,15 @@ export default class SignupScreen extends Component {
     }
   }
 
+  emailIsValid = (email) => {
+    return /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email);
+  }
+
   _handleSignUp = () => {
-    if (this.state.password === this.state.confirmPassword) {
+    if (!this.emailIsValid(this.state.email)) {
+      this.setState({emailErrorMessage: 'Please enter a valid email'})
+    }
+    else if (this.state.password === this.state.confirmPassword) {
       this.setState({
         loading: true
       })
@@ -48,6 +56,7 @@ export default class SignupScreen extends Component {
 
         firebase.firestore().collection('users').add({
           userId: cred.user.uid,
+          name: this.state.name,
           favoriteEvents: [],
           checkedIn: false,
           checkInTime: d
@@ -96,13 +105,17 @@ export default class SignupScreen extends Component {
             floatingPlaceholderColor={{focus: "white"}}
             color='#C0C0C0'
             underlineColor={{default: '#C0C0C0', focus: 'white'}}
-            onChangeText={email => this.setState( {email} )}
+            onChangeText={(email) => this.setState({email: email, emailErrorMessage: null, errorMessage: null})}
             value={this.state.email}
             floatOnFocus
             keyboardType="email-address"
             returnKeyType="next"
             onSubmitEditing={() => this.passwordRef.focus()}
           />
+          {this.state.emailErrorMessage &&
+          <Text style={{ color: 'red', marginBottom: 10 }}>
+            {this.state.emailErrorMessage}
+          </Text>}
           <TextField
             ref={passwordRef => this.passwordRef = passwordRef}
             secureTextEntry={true}
@@ -111,7 +124,7 @@ export default class SignupScreen extends Component {
             floatingPlaceholderColor={{focus: "white"}}
             color='#C0C0C0'
             underlineColor={{default: '#C0C0C0', focus: 'white'}}
-            onChangeText={password => this.setState( {password} )}
+            onChangeText={password => this.setState( {password: password, errorMessage: null} )}
             value={this.state.password}
             floatOnFocus
             returnKeyType="next"
@@ -125,7 +138,7 @@ export default class SignupScreen extends Component {
             floatingPlaceholderColor={{focus: "white"}}
             color='#C0C0C0'
             underlineColor={{default: '#C0C0C0', focus: 'white'}}
-            onChangeText={confirmPassword => this.setState( {confirmPassword} )}
+            onChangeText={confirmPassword => this.setState( {confirmPassword: confirmPassword, errorMessage: null} )}
             value={this.state.confirmPassword}
             floatOnFocus
             returnKeyType="done"
