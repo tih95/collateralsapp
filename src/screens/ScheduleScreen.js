@@ -26,6 +26,10 @@ export default class ScheduleScreen extends Component {
     }
   }
 
+  static navigationOptions = {
+    headerTitle: <Text style={{color: 'white', fontSize: 25, fontWeight: '100',}}>Schedule</Text>, 
+  };
+
   // render each of the schedule cards
   _renderItem = ({ item }) => {
     let speakers = item.speakers;

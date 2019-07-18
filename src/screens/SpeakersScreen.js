@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { SafeAreaView, StyleSheet } from 'react-native';
-import { ActionSheet, Button, View } from 'react-native-ui-lib';
+import { ActionSheet, Button, View, Text } from 'react-native-ui-lib';
 
 import SpeakerList from '../custom/SpeakerList';
 
@@ -13,9 +13,14 @@ export default class SpeakersScreen extends Component {
 
     this.state = {
       speakers: [],
-      pickerVisible: false
+      pickerVisible: false,
+      sortMode: 'country'
     }
   }
+
+  static navigationOptions = {
+    headerTitle: <Text style={{color: 'white', fontSize: 25, fontWeight: '100',}}>Speakers</Text>, 
+  };
 
   _sortByMode = (mode) => {
     let speakerArr = data.speakers;
@@ -52,7 +57,7 @@ export default class SpeakersScreen extends Component {
         }
       })
     }
-    this.setState({speakers: speakerArr})
+    this.setState({speakers: speakerArr, sortMode: mode})
   }
 
   componentDidMount() {
@@ -62,8 +67,8 @@ export default class SpeakersScreen extends Component {
 
     // sort by country
     speakerArr.sort((a, b) => {
-      let aVar = a.name.toLowerCase();
-      let bVar = b.name.toLowerCase();
+      let aVar = a.country.toLowerCase();
+      let bVar = b.country.toLowerCase();
 
       if (aVar > bVar) {
         return 1;
@@ -81,9 +86,13 @@ export default class SpeakersScreen extends Component {
   render() {
     return(
       <SafeAreaView style={styles.container}>
-        <View right>
+        <View style={styles.topRow}>
+          <Text
+            style={{fontWeight: 'bold', fontSize: 16, marginLeft: 10}}>
+            {this.state.sortMode === 'country' ? 'Sorting by country' : 'Sorting by name'}
+          </Text>
           <Button
-            style={{margin: 10}}
+            style={{marginRight: 10}}
             size="small"
             label={'Sort By'}
             onPress={() => {
@@ -115,5 +124,20 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: 'white',
     flex: 1
+  },
+  text: {
+    color: 'white',
+    fontSize: 25,
+    textAlign: 'center',
+    fontWeight: '100',
+    paddingLeft: 5
+  },
+  topRow: {
+    flexDirection: 'row', 
+    alignItems: 'center', 
+    backgroundColor: '#CFD8DC', 
+    justifyContent: 'space-between',
+    paddingTop: 10,
+    paddingBottom: 10
   }
 })

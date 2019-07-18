@@ -23,7 +23,7 @@ export default class HomeScreen extends Component {
          <SafeAreaView  style={styles.gridView}> 
             <View>
                <TouchableOpacity
-                  onPress={() => this.props.navigation.navigate('Speakers')} >
+                  onPress={() => this.props.navigation.navigate('SpeakerList')} >
                   <View style={styles.iconSquare}>
                      <Icon name="md-microphone"
                         size={70} >
@@ -41,7 +41,7 @@ export default class HomeScreen extends Component {
                   </View>
                </TouchableOpacity>
                <TouchableOpacity
-                  onPress={() => this.props.navigation.navigate('Account')} >
+                  onPress={() => this.props.navigation.navigate('AccountInfo')} >
                   <View style={styles.iconSquare}>
                      <Icon name="md-person"
                         size={70} >
@@ -69,15 +69,6 @@ export default class HomeScreen extends Component {
                      <Text>Sponsors</Text>
                   </View>
                </TouchableOpacity>
-               <TouchableOpacity
-                  onPress={() => this.props.navigation.navigate('CheckIn')} >
-                  <View style={styles.iconSquare}>
-                     <Icon name="md-qr-scanner"
-                        size={70} >
-                     </Icon>
-                     <Text>Check in</Text>
-                  </View>
-               </TouchableOpacity>
             </View>
          </SafeAreaView>
        )
@@ -87,9 +78,8 @@ export default class HomeScreen extends Component {
 const styles = StyleSheet.create({
    gridView: {
       flexDirection: 'row',
-      flex: 1,
       justifyContent: 'center',
-      alignItems: 'center',
+      flexWrap: 'wrap',
    },
    iconSquare: {
       alignItems: 'center',

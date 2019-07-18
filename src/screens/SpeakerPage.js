@@ -11,6 +11,10 @@ export default class SpeakerPage extends Component {
       this.speakerInfo = this.props.navigation.state.params.speaker;
    }
 
+   static navigationOptions = {
+      headerTitle: <Text style={{color: 'white', fontSize: 25, fontWeight: '100',}}>Speaker</Text>, 
+   };
+
    render() {
       let icon = Flags[this.speakerInfo.country];
 

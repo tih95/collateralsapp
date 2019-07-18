@@ -17,6 +17,10 @@ export default class QRReaderScreen extends Component {
     }
   }
 
+  static navigationOptions = {
+    headerTitle: <Text style={{color: 'white', fontSize: 25, fontWeight: '100',}}>Check in</Text>, 
+  };
+
   componentDidMount() {
     this.ref.where('userId', '==', firebase.auth().currentUser.uid).get()
     .then((snapshot) => {

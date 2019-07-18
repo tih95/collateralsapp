@@ -14,6 +14,10 @@ export default class AccountScreen extends Component {
     }
   }
 
+  static navigationOptions = {
+    headerTitle: <Text style={{color: 'white', fontSize: 25, fontWeight: '100',}}>Account</Text>, 
+  };
+
   componentDidMount() {
     this.setState({
       displayName: firebase.auth().currentUser.displayName,
@@ -45,7 +49,6 @@ export default class AccountScreen extends Component {
   render() {
     return(
       <SafeAreaView style={styles.container}>
-        <Text style={styles.text}>My Account</Text>
         <Text style={styles.accountInfoText}>{this.state.displayName}</Text>
         <Text style={{color: 'black', textAlign: 'center'}}>{this.state.email}</Text>
         <View style={styles.touchableView}>

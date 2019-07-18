@@ -10,8 +10,6 @@ import React, {Component} from 'react';
 import {  createSwitchNavigator,
           createStackNavigator,
           createAppContainer } from 'react-navigation';
-import { Button } from 'react-native';
-import Ionicons from 'react-native-vector-icons/Ionicons';
 
 import LogoTitle from './src/custom/LogoTitle';
 
@@ -31,40 +29,18 @@ import HomeScreen from './src/screens/HomeScreen';
 import SponsorsScreen from './src/screens/SponsorsScreen';
 import ForgotPasswordScreen from './src/screens/ForgotPasswordScreen';
 
-const SpeakerStack = createStackNavigator(
-  {
-    SpeakerList: SpeakersScreen,
-    Speaker: SpeakerPage
-  },
-  {
-    initialRouteName: 'SpeakerList',
-    headerMode: 'none',
-  },
-  
-)
-
-const AccountStack = createStackNavigator(
-  {
-    AccountInfo: AccountScreen,
-    EditProfile: EditProfileScreen,
-    Settings: SettingsScreen
-  },
-  {
-    initialRouteName: 'AccountInfo',
-    headerMode: 'none',
-  }
-)
-
 const AppStack = createStackNavigator(
   {
     Home: HomeScreen,
-    Speakers: SpeakerStack,
+    SpeakerList: SpeakersScreen,
+    Speaker: SpeakerPage,
     Schedule: ScheduleScreen,
     CheckIn: QRReaderScreen,
-    Account: AccountStack,
+    AccountInfo: AccountScreen,
+    EditProfile: EditProfileScreen,
+    Settings: SettingsScreen,
     Sponsors: SponsorsScreen
   },
-  
   {
     initialRouteName: 'Home',
     headerMode: 'screen',

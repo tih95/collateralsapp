@@ -4,6 +4,10 @@ import { View, Text, Button, Image } from 'react-native-ui-lib';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 
 export default class SponsorsScreen extends Component {
+   static navigationOptions = {
+      headerTitle: <Text style={{color: 'white', fontSize: 25, fontWeight: '100',}}>Sponsors</Text>, 
+    };
+
    render() {
       return (
          <SafeAreaView>
