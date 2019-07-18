@@ -69,6 +69,15 @@ export default class HomeScreen extends Component {
                      <Text>Sponsors</Text>
                   </View>
                </TouchableOpacity>
+               <TouchableOpacity
+                  onPress={() => this.props.navigation.navigate('Endorsements')} >
+                  <View style={styles.iconSquare}>
+                     <Icon name="md-ribbon"
+                        size={70} >
+                     </Icon>
+                     <Text>Endorsements</Text>
+                  </View>
+               </TouchableOpacity>
             </View>
          </SafeAreaView>
        )

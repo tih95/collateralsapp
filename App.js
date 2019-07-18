@@ -28,6 +28,7 @@ import SpeakerPage from './src/screens/SpeakerPage';
 import HomeScreen from './src/screens/HomeScreen';
 import SponsorsScreen from './src/screens/SponsorsScreen';
 import ForgotPasswordScreen from './src/screens/ForgotPasswordScreen';
+import EndorsementScreen from './src/screens/EndorsementScreen';
 
 const AppStack = createStackNavigator(
   {
@@ -39,7 +40,8 @@ const AppStack = createStackNavigator(
     AccountInfo: AccountScreen,
     EditProfile: EditProfileScreen,
     Settings: SettingsScreen,
-    Sponsors: SponsorsScreen
+    Sponsors: SponsorsScreen,
+    Endorsements: EndorsementScreen
   },
   {
     initialRouteName: 'Home',
