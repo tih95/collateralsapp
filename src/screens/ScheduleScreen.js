@@ -19,7 +19,7 @@ export default class ScheduleScreen extends Component {
     this.state = {
       events: [],
       favoriteEvents: [],
-      favoriteMode: false,
+      mode: 'day1',
       pickerVisible: false,
       showFavoriteToast: false,
       showUnfavoriteToast: false
@@ -66,6 +66,7 @@ export default class ScheduleScreen extends Component {
       <View style={styles.container}>
         <View style={styles.time}>
           <Text style={{fontWeight: '600', letterSpacing: 1}}>{item.startTime}</Text>
+          <Text style={{letterSpacing: 1, fontSize: 10}}>Day {item.day}</Text>
         </View>
         <View style={styles.lineContainer}>
           {flags}
@@ -121,7 +122,13 @@ export default class ScheduleScreen extends Component {
             faves = doc.get('favoriteEvents');
             let filteredFaves = faves.filter(item => item.country !== event.country);
             filteredFaves.sort((a, b) => {
-              if (a.startTime > b.startTime) {
+              if (a.day > b.day) {
+                return 1;
+              }
+              else if (a.day < b.day) {
+                return -1;
+              }
+              else if (a.startTime > b.startTime) {
                 return 1;
               }
               else if (a.startTime < b.startTime) {
@@ -159,7 +166,13 @@ export default class ScheduleScreen extends Component {
           snapshot.forEach(doc => {
             faves = doc.get('favoriteEvents');
             faves.sort((a, b) => {
-              if (a.startTime > b.startTime) {
+              if (a.day > b.day) {
+                return 1;
+              }
+              else if (a.day < b.day) {
+                return -1;
+              }
+              else if (a.startTime > b.startTime) {
                 return 1;
               }
               else if (a.startTime < b.startTime) {
@@ -171,15 +184,27 @@ export default class ScheduleScreen extends Component {
             })
             this.setState({
               events: faves,
-              favoriteMode: true
+              mode: 'favorites'
             })
           })
       });
     }
-    else {
+    else if (mode === 'day1') {
+      let filtered = data.events.filter((item) => {
+        return item.day === 1;
+      })
       this.setState({
-        events: data.events,
-        favoriteMode: false
+        events: filtered,
+        mode: 'day1'
+      })
+    }
+    else {
+      let filtered = data.events.filter((item) => {
+        return item.day === 2;
+      })
+      this.setState({
+        events: filtered,
+        mode: 'day2'
       })
     }
   }
@@ -188,7 +213,9 @@ export default class ScheduleScreen extends Component {
     let eventArray = [];
     let faves = [];
 
-    eventArray = data.events;
+    eventArray = data.events.filter((item) => {
+      return item.day === 1
+    });
     
     this.ref.where('userId', '==', firebase.auth().currentUser.uid).get()
     .then((snapshot) => {
@@ -222,7 +249,7 @@ export default class ScheduleScreen extends Component {
             style={styles.topRow}>
             <Text
               style={{fontWeight: 'bold', fontSize: 16, marginLeft: 10}}>
-              {this.state.favoriteMode ? 'Showing Favorites' : 'Showing All'}
+              {this.state.mode === 'day1' ? 'Showing Day 1' : this.state.mode === 'day2' ? 'Showing Day 2' : 'Showing Favorites'}
             </Text>
             <Button
               style={{marginRight: 10}}
@@ -239,7 +266,8 @@ export default class ScheduleScreen extends Component {
               title='Filter by...'
               cancelButtonIndex={3}
               options={[
-                {label: 'All', onPress: () => this.filterList('all')},
+                {label: 'Day 1', onPress: () => this.filterList('day1')},
+                {label: 'Day 2', onPress: () => this.filterList('day2')},
                 {label: 'Favorites', onPress: () => this.filterList('favorites')}
               ]}
               onDismiss={() => this.setState({pickerVisible: false})}
