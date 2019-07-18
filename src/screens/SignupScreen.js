@@ -68,7 +68,14 @@ export default class SignupScreen extends Component {
         })
         this.props.navigation.navigate('App');
       })
-      .catch(error => this.setState({errorMessage: error.message, loading: false}))
+      .catch(e => {
+        if (e.code === 'auth/weak-password') {
+          this.setState({loading: false, errorMessage: 'Password is too weak'})
+        }
+        else {
+            this.setState({loading: false, errorMessage: e.message})
+        }
+      })
 
     }
     else {

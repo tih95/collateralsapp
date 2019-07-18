@@ -13,7 +13,8 @@ export default class EditProfileScreen extends Component {
       this.state = {
          username: '',
          newPassword: '',
-         loading: false
+         loading: false,
+         errorMessage: null
       }
    }
 
@@ -26,6 +27,13 @@ export default class EditProfileScreen extends Component {
                   .then(() => {
                      this.setState({loading: false})
                      firebase.auth().signOut().then(() => this.props.navigation.navigate('AuthLoading'))
+                  }).catch((e) => {
+                     if (e.code === 'auth/weak-password') {
+                        this.setState({loading: false, errorMessage: 'Password is too weak'})
+                     }
+                     else {
+                        this.setState({loading: false, errorMessage: e.message})
+                     }
                   })
             }
             else {
@@ -63,11 +71,15 @@ export default class EditProfileScreen extends Component {
                   floatOnFocus={true}
                   floatingPlaceholderColor={{focus: 'black'}}
                   placeholder='New Password'
-                  onChangeText={newPassword => this.setState({ newPassword })}
+                  onChangeText={newPassword => this.setState({ newPassword: newPassword, errorMessage: null })}
                   autoCorrect={false}
                   secureTextEntry={true}
                   color='black'
                />
+               {this.state.errorMessage &&
+               <Text style={{ color: 'red', marginBottom: 10 }}>
+                  {this.state.errorMessage}
+               </Text>}
                <Text
                   style={{fontStyle: 'italic', color: 'grey'}}>
                   Note: this will sign you out and you will have to login again with new password
