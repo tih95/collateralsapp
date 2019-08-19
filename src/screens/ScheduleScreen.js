@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import { SafeAreaView, StyleSheet, FlatList, TouchableOpacity } from 'react-native';
 import { Image, Text, View, Button, ActionSheet, Toast } from 'react-native-ui-lib';
 
+import moment from 'moment';
 import Icon from 'react-native-vector-icons/Ionicons';
 
 import firebase from 'react-native-firebase';
@@ -69,8 +70,8 @@ export default class ScheduleScreen extends Component {
     return (
       <View style={styles.container}>
         <View style={styles.time}>
-          <Text style={{fontWeight: '600', letterSpacing: 1}}>{item.startTime}</Text>
-          <Text style={{letterSpacing: 1, fontSize: 10}}>Day {item.day}</Text>
+          <Text style={{fontWeight: '600', letterSpacing: 1}}>{moment.unix(item.startTime).format('HH:mm')}</Text>
+          <Text style={{letterSpacing: 1, fontSize: 10}}>{moment.unix(item.startTime).format('MMM, Do')}</Text>
         </View>
         <View style={styles.lineContainer}>
           {flags}

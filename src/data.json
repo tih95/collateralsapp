@@ -252,7 +252,7 @@
             { "name": "Gregory Del Zoppo" },
             { "name": "Yoram Solberg" }
          ],
-         "startTime": "07:30",
+         "startTime": (new Date('November 5, 2019 07:30:00')).getTime() / 1000,
          "day": 1
       },
       {
@@ -262,7 +262,7 @@
             { "name": "Sami Curtze" },
             { "name": "Turgut Tatlimusak" }
          ],
-         "startTime": "08:10",
+         "startTime": (new Date('November 5, 2019 08:10:00')).getTime() / 1000,
          "day": 1
       },
       {
@@ -273,7 +273,7 @@
             { "name": "István Szikora" },
             { "name": "Adam Kobayashi" }
          ],
-         "startTime": "08:50",
+         "startTime": (new Date('November 5, 2019 08:50:00')).getTime() / 1000,
          "day": 1
       },
       {
@@ -286,7 +286,7 @@
             { "name": "Jean Claude Baron" },
             { "name": "Pierre Seners" }
          ],
-         "startTime": "09:30",
+         "startTime": (new Date('November 5, 2019 09:30:00')).getTime() / 1000,
          "day": 1
       },
       {
@@ -298,7 +298,7 @@
             { "name": "Ossama Mansour" },
             { "name": "Tamer Hassen" }
          ],
-         "startTime": "07:30",
+         "startTime": (new Date('November 6, 2019 07:30:00')).getTime() / 1000,
          "day": 2
       },
       {
@@ -308,7 +308,7 @@
             { "name": "Fred Sarfo" },
             { "name": "Alan Bryer" }
          ],
-         "startTime": "08:10",
+         "startTime": (new Date('November 6, 2019 08:10:00')).getTime() / 1000,
          "day": 2
       },
       {
@@ -319,7 +319,7 @@
             { "name": "Marios Psychogios" },
             { "name": "Werner Hacke" }
          ],
-         "startTime": "08:50",
+         "startTime": (new Date('November 6, 2019 08:50:00')).getTime() / 1000,
          "day": 2
       }
    ]
