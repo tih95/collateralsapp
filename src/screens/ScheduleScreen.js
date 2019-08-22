@@ -35,6 +35,7 @@ export default class ScheduleScreen extends Component {
   _renderItem = ({ item }) => {
     let speakers = item.speakers;
     let countries = [];
+    const currentTime = moment().unix();
 
     countries = item.country.split(/[&,]/).map(item => item.trim());
     
@@ -45,7 +46,7 @@ export default class ScheduleScreen extends Component {
     else {
       speakers = speakers.map((speaker) => {
         return (
-            <Text style={{marginTop: 3, fontStyle: 'italic'}}>{speaker.name}</Text>
+            <Text style={{marginTop: 3, fontSize: 12}}>{speaker.name}</Text>
         )
       })
       speakers.unshift(
@@ -67,6 +68,8 @@ export default class ScheduleScreen extends Component {
       })
     }
 
+    
+
     return (
       <View style={styles.container}>
         <View style={styles.time}>
@@ -78,12 +81,15 @@ export default class ScheduleScreen extends Component {
           <View style={{marginTop: 4, width: 1, flex: 1, backgroundColor: 'black'}}></View>
         </View>
         <View style={styles.eventContainer}>
-          <View style={{flex: 1, flexDirection: 'row', justifyContent: 'space-between'}}>
+          <View style={{ flexDirection: 'row'}}>
             <Text 
-              style={{fontWeight: '600', fontSize: 16, marginBottom: 5, letterSpacing: 1}}>
+              style={{fontWeight: '600', fontSize: 16, marginBottom: 5, letterSpacing: 1, flex: 1}}>
               {item.country}
             </Text>
-            
+            <Text style={{fontSize: 9}}>{(currentTime >= item.startTime && currentTime < item.endTime) ? ' Happening Now' : 
+              (currentTime  < item.startTime) ? moment.unix(currentTime).to(moment.unix(item.startTime)) : 'Done'}
+
+            </Text>
           </View>
           <View style={{paddingLeft: 10}}>
             {speakers}

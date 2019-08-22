@@ -4,9 +4,10 @@ import { View, Text, Button, Image } from 'react-native-ui-lib';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 
 let imageUrls = [
-   {url: require('../../assets/img/NeuroVasc_logo.png')},
+   {url: require('../../assets/img/ninds_logo.png')},
+   {url: require('../../assets/img/stryker_logo.png')},
    {url: require('../../assets/img/medtronic_logo.png')},
-   {url: require('../../assets/img/stryker_logo.png')}
+   {url: require('../../assets/img/NeuroVasc_logo.png')},   
 ]
 
 export default class SponsorsScreen extends Component {
@@ -26,7 +27,7 @@ export default class SponsorsScreen extends Component {
             </Text>
             <FlatList
                data={imageUrls}
-               renderItem={({item}) => <Image style={{marginBottom: 10}} source={item.url}/>}
+               renderItem={({item}) => <Image style={{marginBottom: 20}} source={item.url}/>}
                keyExtractor={this._keyExtractor}
             />
          </SafeAreaView>

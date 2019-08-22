@@ -23,7 +23,6 @@ import ScheduleScreen from './src/screens/ScheduleScreen';
 import AccountScreen from './src/screens/AccountScreen';
 import QRReaderScreen from './src/screens/QRReaderScreen';
 import EditProfileScreen from './src/screens/EditProfileScreen';
-import SettingsScreen from './src/screens/SettingsScreen';
 import SpeakerPage from './src/screens/SpeakerPage';
 import HomeScreen from './src/screens/HomeScreen';
 import SponsorsScreen from './src/screens/SponsorsScreen';
@@ -39,7 +38,6 @@ const AppStack = createStackNavigator(
     CheckIn: QRReaderScreen,
     AccountInfo: AccountScreen,
     EditProfile: EditProfileScreen,
-    Settings: SettingsScreen,
     Sponsors: SponsorsScreen,
     Endorsements: EndorsementScreen
   },

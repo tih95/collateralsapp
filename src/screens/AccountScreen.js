@@ -42,10 +42,6 @@ export default class AccountScreen extends Component {
     this.props.navigation.navigate('EditProfile', {refresh: this._refresh});
   }
 
-  _goToSettings = () => {
-    this.props.navigation.navigate('Settings');
-  }
-
   render() {
     return(
       <SafeAreaView style={styles.container}>
@@ -56,10 +52,6 @@ export default class AccountScreen extends Component {
             style={{marginBottom: 25}}
             onPress={this._goToEditProfile}>
             <Text style={{fontSize: 20, fontWeight: '200'}}>Edit Profile</Text>
-          </TouchableOpacity>
-          <TouchableOpacity
-            onPress={this._goToSettings}>
-            <Text style={{fontSize: 20, fontWeight: '200'}}>Settings</Text>
           </TouchableOpacity>
         </View>
         <Button color={'white'} style={styles.signOutButton} label="Sign out" onPress={this._signOut} />

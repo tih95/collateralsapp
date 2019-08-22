@@ -253,6 +253,7 @@
             { "name": "Yoram Solberg" }
          ],
          "startTime": (new Date('November 5, 2019 07:30:00')).getTime() / 1000,
+         "endTime": (new Date('November 5, 2019 08:10:00')).getTime() / 1000,
          "day": 1
       },
       {
@@ -263,6 +264,7 @@
             { "name": "Turgut Tatlimusak" }
          ],
          "startTime": (new Date('November 5, 2019 08:10:00')).getTime() / 1000,
+         "endTime": (new Date('November 5, 2019 08:50:00')).getTime() / 1000,
          "day": 1
       },
       {
@@ -274,6 +276,7 @@
             { "name": "Adam Kobayashi" }
          ],
          "startTime": (new Date('November 5, 2019 08:50:00')).getTime() / 1000,
+         "endTime": (new Date('November 5, 2019 09:30:00')).getTime() / 1000,
          "day": 1
       },
       {
@@ -287,6 +290,158 @@
             { "name": "Pierre Seners" }
          ],
          "startTime": (new Date('November 5, 2019 09:30:00')).getTime() / 1000,
+         "endTime": (new Date('November 5, 2019 10:10:00')).getTime() / 1000,
+         "day": 1
+      },
+      {
+         "country": "Spain & Portugal",
+         "speakers": [
+            { "name": "Marc Ribo" },
+            { "name": "Manuel Requena" },
+            { "name": "Marta Olive" },
+            { "name": "Alvaro Garcia-Tornel" },
+            { "name": "Miguel Viana Baptista" },
+            { "name": "Joao Sargento Freitas" }
+         ],
+         "startTime": (new Date('November 5, 2019 10:40:00')).getTime() / 1000,
+         "endTime": (new Date('November 5, 2019 11:20:00')).getTime() / 1000,
+         "day": 1
+      },
+      {
+         "country": "United States",
+         "speakers": [
+            { "name": "Marilyn Cipolla" },
+            { "name": "Guillermo Linares" },
+            { "name": "Randy Marshall" },
+            { "name": "Mitchell Elkind" },
+         ],
+         "startTime": (new Date('November 5, 2019 11:20:00')).getTime() / 1000,
+         "endTime": (new Date('November 5, 2019 12:00:00')).getTime() / 1000,
+         "day": 1
+      },
+      {
+         "country": "Lunch at Plateia",
+         "speakers": [],
+         "startTime": (new Date('November 5, 2019 12:00:00')).getTime() / 1000,
+         "endTime": (new Date('November 5, 2019 13:00:00')).getTime() / 1000,
+         "day": 1
+      },
+      {
+         "country": "Canada",
+         "speakers": [
+            { "name": "Vitor Pereira" },
+            { "name": "Ken Butcher" },
+            { "name": "Brian Buck" },
+            { "name": "Khurshid Khan" },
+            { "name": "Glen Jickling" },
+            { "name": "Tom Jeerakithil" },
+         ],
+         "startTime": (new Date('November 5, 2019 13:00:00')).getTime() / 1000,
+         "endTime": (new Date('November 5, 2019 13:40:00')).getTime() / 1000,
+         "day": 1
+      },
+      {
+         "country": "Australia, Fiji & New Zealand",
+         "speakers": [
+            { "name": "Bernard Yan" },
+            { "name": "Mark Parsons" },
+            { "name": "Anne Alexandrov" },
+            { "name": "Anna Ranta" },
+         ],
+         "startTime": (new Date('November 5, 2019 13:40:00')).getTime() / 1000,
+         "endTime": (new Date('November 5, 2019 14:20:00')).getTime() / 1000,
+         "day": 1
+      },
+      {
+         "country": "Neurovasuclar Devices & Technologies: Exhibitor Workshop",
+         "speakers": [],
+         "startTime": (new Date('November 5, 2019 14:20:00')).getTime() / 1000,
+         "endTime": (new Date('November 5, 2019 15:00:00')).getTime() / 1000,
+         "day": 1
+      },
+      {
+         "country": "China",
+         "speakers": [
+            { "name": "Min Lou" },
+            { "name": "Liping Liu" },
+         ],
+         "startTime": (new Date('November 5, 2019 16:00:00')).getTime() / 1000,
+         "endTime": (new Date('November 5, 2019 16:40:00')).getTime() / 1000,
+         "day": 1
+      },
+      {
+         "country": "Hong Kong, Philippines, Singapore & Vietnam",
+         "speakers": [
+            { "name": "Thomas Leung" },
+            { "name": "Cindy Leng" },
+            { "name": "Jose C Navarro" },
+            { "name": "Thang H Nguyen" },
+            { "name": "Vijay K Sharma"}
+         ],
+         "startTime": (new Date('November 5, 2019 16:40:00')).getTime() / 1000,
+         "endTime": (new Date('November 5, 2019 17:20:00')).getTime() / 1000,
+         "day": 1
+      },
+      {
+         "country": "Nuerovascular Imaging Research Core Lab Tour Before Dinner Session",
+         "speakers": [],
+         "startTime": (new Date('November 5, 2019 17:20:00')).getTime() / 1000,
+         "endTime": (new Date('November 5, 2019 19:20:00')).getTime() / 1000,
+         "day": 1
+      },
+      {
+         "country": "Armenia, Georgia & Azerbaijan",
+         "speakers": [
+            { "name": "Nerses Sanossian" },
+            { "name": "Mikayel Grigoryan" },
+            { "name": "David Sahakyan" },
+            { "name": "Alexander Tsiskaridze" },
+            { "name": "Nabil Seyidov" }
+         ],
+         "startTime": (new Date('November 5, 2019 19:20:00')).getTime() / 1000,
+         "endTime": (new Date('November 5, 2019 20:00:00')).getTime() / 1000,
+         "day": 1
+      },
+      {
+         "country": "Tajikistan, Uzbekistan & Kyrgyzstan",
+         "speakers": [
+            { "name": "Isrofilov Maksud" },
+            { "name": "Gafurov Gafurovitch" },
+            { "name": "Nilufar Rashidova" },
+            { "name": "Hurshida Rasulova" },
+            { "name": "Inna Lutsenko" },
+            { "name": "Abdusalim Artykbaev" },
+            { "name": "Aishoola Sultanova" }
+         ],
+         "startTime": (new Date('November 5, 2019 20:00:00')).getTime() / 1000,
+         "endTime": (new Date('November 5, 2019 20:40:00')).getTime() / 1000,
+         "day": 1
+      },
+      {
+         "country": "India, Nepal & Bhutan",
+         "speakers": [
+            { "name": "Aneesh Singhal" },
+            { "name": "Jeyaraj Pandian" },
+            { "name": "Lekhjung Thapa" },
+            { "name": "Yangchen" },
+            { "name": "Tashi Tenzin" }
+         ],
+         "startTime": (new Date('November 5, 2019 20:40:00')).getTime() / 1000,
+         "endTime": (new Date('November 5, 2019 21:20:00')).getTime() / 1000,
+         "day": 1
+      },
+      {
+         "country": "Russia & Kazakhstan",
+         "speakers": [
+            { "name": "Andrei V Alexandrov" },
+            { "name": "Kirill Orlov" },
+            { "name": "Anton Gorbatykh" },
+            { "name": "Dmitry Kislitsin" },
+            { "name": "Aida Kondybayeva" },
+            { "name": "Yerbol Makhamvetov" },
+         ],
+         "startTime": (new Date('November 5, 2019 21:20:00')).getTime() / 1000,
+         "endTime": (new Date('November 5, 2019 22:00:00')).getTime() / 1000,
          "day": 1
       },
       {
@@ -299,6 +454,7 @@
             { "name": "Tamer Hassen" }
          ],
          "startTime": (new Date('November 6, 2019 07:30:00')).getTime() / 1000,
+         "endTime": (new Date('November 6, 2019 08:10:00')).getTime() / 1000,
          "day": 2
       },
       {
@@ -309,6 +465,7 @@
             { "name": "Alan Bryer" }
          ],
          "startTime": (new Date('November 6, 2019 08:10:00')).getTime() / 1000,
+         "endTime": (new Date('November 6, 2019 08:50:00')).getTime() / 1000,
          "day": 2
       },
       {
@@ -320,6 +477,112 @@
             { "name": "Werner Hacke" }
          ],
          "startTime": (new Date('November 6, 2019 08:50:00')).getTime() / 1000,
+         "endTime": (new Date('November 6, 2019 09:30:00')).getTime() / 1000,
+         "day": 2
+      },
+      {
+         "country": "Bulgaria, Croatia & Romania",
+         "speakers": [
+            { "name": "Radoslav Raychev" },
+            { "name": "Stanimir Sirakov" },
+            { "name": "Vladimir Kalousek" },
+            { "name": "Marina Roje Bedekovic" },
+            { "name": "Tudor Jovin" },
+            { "name": "Sorin Tuta" }
+         ],
+         "startTime": (new Date('November 6, 2019 09:30:00')).getTime() / 1000,
+         "endTime": (new Date('November 6, 2019 10:10:00')).getTime() / 1000,
+         "day": 2
+      },
+      {
+         "country": "Belgium & Netherlands",
+         "speakers": [
+            { "name": "Fabien Scalzo" },
+            { "name": "Simon De Meyer" },
+            { "name": "Ivo Jansen" },
+            { "name": "Charles Majoie" },
+            { "name": "Henk Marquering" },
+            { "name": "Yvo Roos" }
+         ],
+         "startTime": (new Date('November 6, 2019 10:40:00')).getTime() / 1000,
+         "endTime": (new Date('November 6, 2019 11:20:00')).getTime() / 1000,
+         "day": 2
+      },
+      {
+         "country": "Brazil & Uruguay",
+         "speakers": [
+            { "name": "Sheila C Martins" },
+            { "name": "Raul G Nogueira" },
+            { "name": "Fernando Vinuela" },
+            { "name": "Claudia Camejo" }
+         ],
+         "startTime": (new Date('November 6, 2019 11:20:00')).getTime() / 1000,
+         "endTime": (new Date('November 6, 2019 12:00:00')).getTime() / 1000,
+         "day": 2
+      },
+      {
+         "country": "Lunch at Plateia",
+         "speakers": [],
+         "startTime": (new Date('November 6, 2019 12:00:00')).getTime() / 1000,
+         "endTime": (new Date('November 6, 2019 13:00:00')).getTime() / 1000,
+         "day": 2
+      },
+      {
+         "country": "Argentina, Chile & Paraguay",
+         "speakers": [
+            { "name": "Pedro Lylyk" },
+            { "name": "Edward Feldmann" },
+            { "name": "Eloy Mansilla" },
+            { "name": "Alan Flores" },
+            { "name": "Laia Sero" }
+         ],
+         "startTime": (new Date('November 6, 2019 13:00:00')).getTime() / 1000,
+         "endTime": (new Date('November 6, 2019 13:40:00')).getTime() / 1000,
+         "day": 2
+      },
+      {
+         "country": "United States",
+         "speakers": [
+            { "name": "Jason Hinman" },
+            { "name": "Kwan Ng" },
+            { "name": "Adam DeHavenon" }
+         ],
+         "startTime": (new Date('November 6, 2019 13:40:00')).getTime() / 1000,
+         "endTime": (new Date('November 6, 2019 14:20:00')).getTime() / 1000,
+         "day": 2
+      },
+      {
+         "country": "Mexico",
+         "speakers": [
+            { "name": "Antonio Arauz" },
+            { "name": "Beatriz Mendez" },
+            { "name": "Steven Warach" },
+            { "name": "Adrienne Dula" }
+         ],
+         "startTime": (new Date('November 6, 2019 14:50:00')).getTime() / 1000,
+         "endTime": (new Date('November 6, 2019 15:30:00')).getTime() / 1000,
+         "day": 2
+      },
+      {
+         "country": "Japan",
+         "speakers": [
+            { "name": "Noboyuki Sakai" },
+            { "name": "Nobuyuki Ohara" }
+         ],
+         "startTime": (new Date('November 6, 2019 15:30:00')).getTime() / 1000,
+         "endTime": (new Date('November 6, 2019 16:10:00')).getTime() / 1000,
+         "day": 2
+      },
+      {
+         "country": "Mongolia & Korea",
+         "speakers": [
+            { "name": "Amarbayasgalan Ravdan" },
+            { "name": "Ganbaatar Rentsenkhuu" },
+            { "name": "Erdenebat Ganzorig" },
+            { "name": "Jong-Won Chung" }
+         ],
+         "startTime": (new Date('November 6, 2019 16:10:00')).getTime() / 1000,
+         "endTime": (new Date('November 6, 2019 16:50:00')).getTime() / 1000,
          "day": 2
       }
    ]

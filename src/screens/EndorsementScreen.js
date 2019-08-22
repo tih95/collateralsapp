@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import { SafeAreaView, StyleSheet, FlatList } from 'react-native';
 import { View, Text, Button, Image } from 'react-native-ui-lib';
+import Grid from 'react-native-grid-component';
 
 let imageUrls = [
    {url: require('../../assets/img/eso_logo.jpg')},
@@ -16,23 +17,27 @@ let imageUrls = [
 export default class EndorsementScreen extends Component {
    static navigationOptions = {
       headerTitle: <Text style={{color: 'white', fontSize: 25, fontWeight: '100',}}>Endorsements</Text>, 
-    };
+   };
 
-   _keyExtractor = (item, index) => '{}';
+   _renderItem = data => (
+      <Image source={data.url} style={styles.item}/>
+    );
+  
+    _renderPlaceholder = () => <View style={styles.item} />;
 
    render() {
       return (
-         <SafeAreaView
-            style={styles.container}
-         >
+         <SafeAreaView style={styles.container}>
             <Text style={styles.title}>
                Thank you to these organizations for your endorsements!
             </Text>
-            <FlatList
+            <Grid
+               renderItem={this._renderItem}
+               renderPlaceholder={this._renderPlaceholder}
+               style={styles.list}
                data={imageUrls}
-               renderItem={({item}) => <Image style={{marginBottom: 10}} source={item.url}/>}
-               keyExtractor={this._keyExtractor}
-            />
+               numColumns={1}
+               keyExtractor={(item, index) => index.toString()}/>
          </SafeAreaView>
       )
    }
@@ -40,14 +45,20 @@ export default class EndorsementScreen extends Component {
 
 const styles = StyleSheet.create({
    container: {
-      alignItems: 'center',
-      justifyContent: 'space-between',
-      flexDirection: 'column',
       flex: 1
    },
    title: {
       fontSize: 30,
       textAlign: 'center',
       marginBottom: 20
+   },
+   item: {
+      flex: 1,
+      margin: 30,
+      alignSelf: 'center'
+   }, 
+   list: {
+      flex: 1,
+      
    }
 })
