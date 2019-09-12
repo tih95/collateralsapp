@@ -8,6 +8,7 @@ let imageUrls = [
    {url: require('../../assets/img/stryker_logo.png')},
    {url: require('../../assets/img/medtronic_logo.png')},
    {url: require('../../assets/img/NeuroVasc_logo.png')},   
+   {url: require('../../assets/img/cerenovus-logo.png')}
 ]
 
 export default class SponsorsScreen extends Component {
